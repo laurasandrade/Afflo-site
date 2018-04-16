@@ -4,17 +4,11 @@ class ClienteController {
 		let $ = document.querySelector.bind(document);
 		this._inputNome = $("#nome");
 		this._inputEmail = $("#email");		
-		this._inputContratante = $("#perfil");	
-		this._inputAnalise = $('#FormControlTextarea1');
-		this._inputLidar = $('#FormControlTextarea2');
-		this._inputSolucao = $('#FormControlTextarea3');
-		this._inputTelefone = $('#telefone');
 		this._ip = $("#ip");
 		this._data = DateHelper.dataParaTexto(new Date());
 	}
 
 
-  	
 
 	adiciona(event) {
 		event.preventDefault();
@@ -23,11 +17,6 @@ class ClienteController {
 		let cliente = new Cliente(
 			this._inputNome.value,
 			this._inputEmail.value,
-			this._inputContratante.value,
-			this._inputAnalise.value,
-			this._inputLidar.value,
-			this._inputSolucao.value,
-			this._inputTelefone.value,
 			this._ip.value,
 			this._data
 		);
@@ -95,14 +84,8 @@ class ClienteController {
  	    //document.getElementById("success").textContent="";
  		this._inputNome.value="";
 		this._inputEmail.value = ""	;
-		this._inputAnalise.value="";
-		this._inputLidar.value="";
-		this._inputSolucao.value ="";
-		this._inputTelefone.value="";
 		this._inputNome.focus();
  }
-
-
  	
  
 }
